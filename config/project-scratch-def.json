@@ -1,0 +1,14 @@
+{
+  "orgName": "kbowden company",
+  "edition": "Developer",
+  "features": ["EnableSetPasswordInApi"],
+  "release": "Preview",
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    }
+  }
+}

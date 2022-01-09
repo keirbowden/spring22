@@ -1,0 +1,38 @@
+<template>
+    <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading" variant="brand"></lightning-spinner>
+    </template>
+    <template if:false={isLoading}>
+        <lightning-layout multiple-rows>
+            <template for:each={classDetails} for:item="classDetail">
+                <lightning-layout-item key={classDetail.classId} size="3" padding="around-small">
+
+                    <article class="slds-card slds-card_boundary card-fixed-height">
+                        <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                </div>
+                                <div class="slds-media__body slds-text-heading_small">
+                                    <strong>{classDetail.fullName}</strong>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="slds-card__body slds-card__body_inner card-body-fixed-height">
+                            <div class="slds-align_absolute-center slds-wrap slds-has-flexi-truncate">
+                                <p class="slds-var-p-horizontal_small">
+                                    {classDetail.description}
+                                </p>
+                            </div>
+                        </div>
+                        <footer class="slds-card__footer">
+                            <p slot="footer">
+                                <span
+                                    class="slds-pill__label slds-var-p-left_x-small">Author:&nbsp;{classDetail.author}</span>
+                            </p>
+                        </footer>
+                    </article>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+    </template>
+</template>
